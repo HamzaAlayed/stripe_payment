@@ -22,5 +22,7 @@ Route::prefix('v1')->group(function () {
         Route::post('logout', 'Users\AuthController@logout')->name('users.logout');
 
     });
+    Route::group(['middleware' => 'jwt.auth'], function () {
 
+    });
 });

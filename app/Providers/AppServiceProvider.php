@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Contracts\Payments\GatewayInterface;
-use App\Contracts\UserContract;
+use App\Contracts\UserInterface;
 use App\Repositories\Payments\Gateways\Stripe;
 use App\Repositories\UserRepository;
 use Illuminate\Support\ServiceProvider;
@@ -32,6 +32,6 @@ class AppServiceProvider extends ServiceProvider
         });
 
         /** User binding */
-        $this->app->bind(UserContract::class,UserRepository::class);
+        $this->app->bind(UserInterface::class,UserRepository::class);
     }
 }

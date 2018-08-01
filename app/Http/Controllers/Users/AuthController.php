@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Contracts\UserContract;
+use App\Contracts\UserInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Users\RegisterRequest;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -13,15 +13,15 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     /**
-     * @var UserContract
+     * @var UserInterface
      */
     private $user;
 
     /**
      * AuthController constructor.
-     * @param UserContract $user
+     * @param UserInterface $user
      */
-    function __construct(UserContract $user)
+    function __construct(UserInterface $user)
     {
         $this->user = $user;
     }

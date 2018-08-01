@@ -9,7 +9,7 @@
 namespace App\Repositories;
 
 
-use App\Contracts\UserContract;
+use App\Contracts\UserInterface;
 use App\Entities\User;
 use Illuminate\Container\Container as App;
 
@@ -18,7 +18,7 @@ use Illuminate\Container\Container as App;
  * Class User
  * @package App\Repositories
  */
-class UserRepository extends Database implements UserContract
+class UserRepository extends Database implements UserInterface
 {
     public function __construct(App $app)
     {
