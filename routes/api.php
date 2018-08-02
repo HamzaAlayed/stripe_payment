@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,9 +18,16 @@ Route::prefix('v1')->group(function () {
     Route::group(['prefix' => 'auth', 'middleware' => 'jwt.auth'], function () {
         Route::middleware('jwt.refresh')->get('/token/refresh', 'Users\AuthController@refresh')->name('users.token');
         Route::post('logout', 'Users\AuthController@logout')->name('users.logout');
-
     });
     Route::group(['middleware' => 'jwt.auth'], function () {
-
+        Route::post('orders/{order}/cancel', 'Products\OrderController@refund')->name('order.cancel');
+        Route::resources([
+            'users' => 'Users\UserController',
+            'products' => 'Products\ProductController',
+            'orders' => 'Products\OrderController'
+        ]);
+        Route::group(['prefix' => 'payment'], function () {
+            Route::resource('methods', 'Payments\PaymentMethodController');
+        });
     });
 });
