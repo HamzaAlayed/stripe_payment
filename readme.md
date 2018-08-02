@@ -18,4 +18,8 @@
 
 #### The following is the class diagram
 
-![alt text](https://raw.githubusercontent.com/developh/stripe_payment/master/Class%20Digram.png) 
+![alt text](https://raw.githubusercontent.com/developh/stripe_payment/master/class_digram.png) 
+
+#### The following is the API endpoints
+
+![alt text](https://raw.githubusercontent.com/developh/stripe_payment/master/api_end_points.png) 
