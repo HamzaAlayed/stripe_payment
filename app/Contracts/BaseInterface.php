@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
-interface Eloquent
+interface BaseInterface
 {
 
 
@@ -21,7 +21,7 @@ interface Eloquent
     /**
      * @param array $data
      *
-     * Base|\Illuminate\Database\Eloquent\Model
+     * Base|\Illuminate\BaseRepository\BaseInterface\Model
      */
     public function create($data = []);
 

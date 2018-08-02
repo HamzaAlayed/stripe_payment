@@ -18,7 +18,7 @@ use Illuminate\Container\Container as App;
  * Class User
  * @package App\Repositories
  */
-class UserRepository extends Database implements UserInterface
+class UserRepository extends BaseRepository implements UserInterface
 {
     public function __construct(App $app)
     {

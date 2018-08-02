@@ -2,6 +2,6 @@
 
 namespace App\Contracts;
 
-interface UserInterface extends Eloquent
+interface UserInterface extends BaseInterface
 {
 }

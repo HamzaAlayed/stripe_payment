@@ -5,11 +5,11 @@ namespace App\Contracts\Payments;
 interface GatewayInterface
 {
     /**
-     * Create a new user on the stripe server
+     * Create a new user on the gateway server
      *
      * @param string $token
      * @param array $properties
-     * @return \Stripe\Customer
+
      */
     public function create($token, array $properties = []);
 
@@ -19,8 +19,6 @@ interface GatewayInterface
      * @param string $id
      * @param int    $amount
      * @param array  $options
-     * @return \Stripe\Charge
-     * @throws \Stripe\Error\Card
      */
     public function charge($id, $amount, array $options = []);
 
@@ -29,7 +27,6 @@ interface GatewayInterface
      *
      * @param string $id
      * @param string $token
-     * @return \Stripe\Customer
      */
     public function updateCard($id, $token);
 
@@ -37,28 +34,26 @@ interface GatewayInterface
      * Get the customer from the gateway
      *
      * @param string $id
-     * @return \Stripe\Customer
      */
     public function getCustomerFromGateway($id);
 
     /**
      * Get the last four credit card digits
      *
-     * @param \Stripe\Customer $customer
+     * @param $customer
      * @return string
      */
     public function getLastFourCardDigits($customer);
 
     /**
      * Get the credit card brand
-     *
-     * @param \Stripe\Customer $customer
+     * @param $customer
      * @return string
      */
     public function getCreditCardBrand($customer);
 
     /**
-     * Get the stripe supported currency
+     * Get supported currency
      *
      * @return string
      */

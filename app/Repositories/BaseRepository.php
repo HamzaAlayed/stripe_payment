@@ -8,7 +8,7 @@
 
 namespace App\Repositories;
 
-use App\Contracts\Eloquent as EloquentInterface;
+use App\Contracts\BaseInterface as EloquentInterface;
 use App\Entities\BaseEntity;
 use Illuminate\Container\Container as App;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-abstract class Database implements EloquentInterface
+abstract class BaseRepository implements EloquentInterface
 {
     protected $with = [];
     /**
