@@ -1,3 +1,6 @@
+##### I built this solution using repository pattern and JWT authentication, I have not time to build it, completely (Full functionality).
+
+
 #### My work in the following directories:
 
 - Contracts
@@ -15,7 +18,4 @@
 
 #### The following is the class diagram
 
-![alt text](https://raw.githubusercontent.com/developh/stripe_payment/master/Class%20Digram.png)
-
-
-##### I built this solution using repository pattern and JWT authentication, I have not time to build it, completely (Full functionality). 
+![alt text](https://raw.githubusercontent.com/developh/stripe_payment/master/Class%20Digram.png) 
