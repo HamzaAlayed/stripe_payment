@@ -1,4 +1,4 @@
-##### I built this solution using repository pattern and JWT authentication, I have not time to build it, completely (Full functionality).
+##### I built this solution using repository pattern and JWT authentication.
 
 
 #### My work in the following directories:
